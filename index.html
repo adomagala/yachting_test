@@ -15,6 +15,7 @@
             height: 100vh;
             background-color: #f0f0f0;
         }
+
         .container {
             background-color: white;
             border-radius: 8px;
@@ -24,10 +25,12 @@
             width: 90%;
             text-align: center;
         }
+
         h1 {
             font-size: 24px;
             margin-bottom: 20px;
         }
+
         .answer {
             background-color: #007BFF;
             color: white;
@@ -39,21 +42,24 @@
             cursor: pointer;
             font-size: 16px;
         }
+
         .answer:hover {
             background-color: #0056b3;
         }
+
         .result {
             margin-top: 20px;
             font-size: 18px;
             font-weight: bold;
         }
     </style>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Moja Strona</title>
     <script>
-        let questionsList = [];
+        var questionsList = [];
+        var questionId = -1
 
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             fetch('all_questions.json')
                 .then(response => response.json())
                 .then(data => {
@@ -64,39 +70,70 @@
                     document.getElementById('question').innerText = 'Błąd ładowania pytania.';
                 });
         });
+
+        function simpleShuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function nextQuestion() {
+            let nextQuestionId = questionId + 1
+
+            if (nextQuestionId < questionsList.length) {
+                questionText = questionsList[nextQuestionId].content
+                correctAnswer = questionsList[nextQuestionId].correct_answer
+                incorrectAnswer1 = questionsList[nextQuestionId].incorrect_answer_1
+                incorrectAnswer2 = questionsList[nextQuestionId].incorrect_answer_2
+
+                answersList = simpleShuffle([correctAnswer, incorrectAnswer1, incorrectAnswer2])
+
+                questionId += 1
+
+                document.getElementById('question').innerText = questionText
+
+                const answersContainer = document.getElementById('answers');
+                answersList.forEach(answer => {
+                    const button = document.createElement('button');
+                    button.className = 'answer';
+                    button.innerText = answer;
+                    // button.onclick = () => selectAnswer(answer);
+                    answersContainer.appendChild(button);
+                });
+            }
+        }
+
     </script>
 </head>
 <body>
-    <div class="container">
-        <h1 id="question">Ładowanie pytania...</h1>
-        <div id="answers"></div>
-        <div id="result" class="result"></div>
-    </div>
-    <script>
-        // document.addEventListener("DOMContentLoaded", function() {
-        //     fetch('all_questions.json')
-        //         .then(response => response.json())
-        //         .then(data => {
-        //             document.getElementById('question').innerText = data[0].content;
-        //             const answersContainer = document.getElementById('answers');
-        //             // data[].answers.forEach(answer => {
-        //             //     const button = document.createElement('button');
-        //             //     button.className = 'answer';
-        //             //     button.innerText = answer;
-        //             //     button.onclick = () => selectAnswer(answer);
-        //             //     answersContainer.appendChild(button);
-        //             // });
-        //         })
-        //         .catch(error => {
-        //             console.error('Error fetching JSON:', error);
-        //             document.getElementById('question').innerText = 'Błąd ładowania pytania.';
-        //         });
-        // });
-        //
-        // function selectAnswer(answer) {
-        //     document.getElementById('result').innerText = `Wybrałeś: ${answer}`;
-        // }
-    </script>
+<div class="container">
+    <h1 id="question">Ładowanie pytania...</h1>
+    <div id="answers"></div>
+    <div id="result" class="result"></div>
+</div>
+<script>
+    // document.addEventListener("DOMContentLoaded", function() {
+    //     fetch('all_questions.json')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             document.getElementById('question').innerText = data[0].content;
+    //             const answersContainer = document.getElementById('answers');
+    //             // data[].answers.forEach(answer => {
+    //             //     const button = document.createElement('button');
+    //             //     button.className = 'answer';
+    //             //     button.innerText = answer;
+    //             //     button.onclick = () => selectAnswer(answer);
+    //             //     answersContainer.appendChild(button);
+    //             // });
+    //         })
+    //         .catch(error => {
+    //             console.error('Error fetching JSON:', error);
+    //             document.getElementById('question').innerText = 'Błąd ładowania pytania.';
+    //         });
+    // });
+    //
+    // function selectAnswer(answer) {
+    //     document.getElementById('result').innerText = `Wybrałeś: ${answer}`;
+    // }
+</script>
 </body>
 </html>
 
