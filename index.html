@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Moja Strona</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('all_questions.json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('json-content').innerText = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error fetching JSON:', error);
+                    document.getElementById('json-content').innerText = 'Błąd ładowania pliku JSON.';
+                });
+        });
+    </script>
+</head>
+<body>
+    <h1>Stała wartość: 42</h1>
+    <pre id="json-content">Ładowanie...</pre>
+</body>
+</html>
