@@ -127,11 +127,15 @@
             } else {
                 button.style.backgroundColor  = 'green';
             }
+
+            button.setAttribute('onclick', '');
         });
     }
 
     function checkAnswer(clickedButton) {
         clickedButton.style.fontWeight = "bold";
+
+        colorAnswers();
     }
 
 </script>
