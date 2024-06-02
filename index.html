@@ -143,10 +143,10 @@
         var buttons = answersContainer.querySelectorAll("button");
 
         buttons.forEach(function (button) {
-            if (button.is_correct_answer === 'false') {
-                button.style.backgroundColor = 'red';
-            } else {
+            if (button.getAttribute('is_correct_answer') === 'true') {
                 button.style.backgroundColor = 'green';
+            } else {
+                button.style.backgroundColor = 'red';
             }
 
             button.setAttribute('onclick', '');
