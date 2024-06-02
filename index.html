@@ -52,6 +52,27 @@
             font-size: 18px;
             font-weight: bold;
         }
+
+        .navigation-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigation-buttons button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation-buttons button:hover {
+            background-color: #0056b3;
+        }
     </style>
     <meta charset="UTF-8">
     <title>Moja Strona</title>
@@ -123,9 +144,9 @@
 
         buttons.forEach(function (button) {
             if (button.is_correct_answer === 'false') {
-                button.style.backgroundColor  = 'red';
+                button.style.backgroundColor = 'red';
             } else {
-                button.style.backgroundColor  = 'green';
+                button.style.backgroundColor = 'green';
             }
 
             button.setAttribute('onclick', '');
@@ -144,8 +165,8 @@
     <h1 id="question"></h1>
     <div id="answers"></div>
     <div id="question_management">
-        <button onclick="nextQuestion()">Nastepne pytanie</button>
-        <button onclick="previousQuestion()">Poprzednie pytanie</button>
+        <button id="previousButton" onclick="previousQuestion()">Poprzednie pytanie</button>
+        <button id="nextButton" onclick="nextQuestion()">Nastepne pytanie</button>
     </div>
 </div>
 </body>
