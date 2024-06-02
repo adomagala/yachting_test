@@ -181,7 +181,7 @@
         "title": "Przepisy Śródlądowe",
         "description": "ŻJ - Przepisy Śródlądowe",
         "group": "4 - Sygnały wzywania pomocy",
-        "content": " Sygnał dźwiękowy składający się z grupy trzech krótkich, trzech długich i trzech<br />krótkich dźwięków oznacza:",
+        "content": " Sygnał dźwiękowy składający się z grupy trzech krótkich, trzech długich i trzech krótkich dźwięków oznacza:",
         "correct_answer": "sygnał wzywania pomocy",
         "incorrect_answer_1": "mam nurka pod wodą",
         "incorrect_answer_2": "niebezpieczeństwo zderzenia"
@@ -346,7 +346,7 @@
         "title": "Przepisy Śródlądowe",
         "description": "ŻJ - Przepisy Śródlądowe",
         "group": "1 - definicje uprawnienia war. dopuszczenia do egz. etykieta",
-        "content": " Określenie kierunku w &#8222;górę&#8221; na głównym szlaku Wielkich Jezior Mazurskich oznacza ruch w<br />kierunku:",
+        "content": " Określenie kierunku w &#8222;górę&#8221; na głównym szlaku Wielkich Jezior Mazurskich oznacza ruch w kierunku:",
         "correct_answer": "miejscowości Pisz",
         "incorrect_answer_1": "miejscowości Węgorzewo",
         "incorrect_answer_2": "miejscowości Ruciane-Nida"
@@ -2778,7 +2778,7 @@
         "description": "ŻJ - Budowa jachtu",
         "group": "1 - Kadłub",
         "content": " Kokpit to:",
-        "correct_answer": "przestrzeń dla załogi skąd można obsługiwać urządzenia jachtu (np. szoty żagli, ster<br />itp.)",
+        "correct_answer": "przestrzeń dla załogi skąd można obsługiwać urządzenia jachtu (np. szoty żagli, ster itp.)",
         "incorrect_answer_1": "rufowa część kadłuba jachtu",
         "incorrect_answer_2": "schowek na kotwicę na dziobie jachtu"
     },
@@ -4767,9 +4767,9 @@
         "description": "ŻJ - Locja śródlądowa",
         "group": "2 - oznakowanie m. niebezpiecznych, odosobnione, bezp. woda, wyjscie szlakow z jezior.",
         "content": " Wschodni znak kardynalny to:",
-        "correct_answer": "pława, kolumienka lub tyka ze znakiem szczytowym dwa<br />czarne stożki, jeden nad drugim, podstawami do siebie",
-        "incorrect_answer_1": "pława, kolumienka lub tyka ze znakiem szczytowym dwa<br />czarne stożki, jeden nad drugim, wierzchołkami skierowanymi w dół",
-        "incorrect_answer_2": "pława, kolumienka lub tyka ze znakiem szczytowym dwa<br />czarne stożki, jeden nad drugim, wierzchołkami skierowanymi w górę"
+        "correct_answer": "pława, kolumienka lub tyka ze znakiem szczytowym dwa czarne stożki, jeden nad drugim, podstawami do siebie",
+        "incorrect_answer_1": "pława, kolumienka lub tyka ze znakiem szczytowym dwa czarne stożki, jeden nad drugim, wierzchołkami skierowanymi w dół",
+        "incorrect_answer_2": "pława, kolumienka lub tyka ze znakiem szczytowym dwa czarne stożki, jeden nad drugim, wierzchołkami skierowanymi w górę"
     },
     {
         "test_id": "2",
@@ -5426,7 +5426,7 @@
         "title": "Locja śródlądowa",
         "description": "ŻJ - Locja śródlądowa",
         "group": "5 - Nakaz, ograniczenie, zalecenie",
-        "content": " Dwa zielone światła umieszczone na przęśle mostu<br />oznaczają:",
+        "content": " Dwa zielone światła umieszczone na przęśle mostu oznaczają:",
         "correct_answer": "zakaz przejścia poza skrajnią określoną światłami",
         "incorrect_answer_1": "nakaz przejścia pod mostem",
         "incorrect_answer_2": "zakaz przejścia pod mostem"
@@ -5835,7 +5835,7 @@
         "title": "Meteorologia",
         "description": "ŻJ - Meteorologia",
         "group": "3 - opis lub prędkość wiatru -> skala B",
-        "content": " W prognozie pogody na śródlądziu najważniejsze dla żeglarzy<br />informacje dotyczą:",
+        "content": " W prognozie pogody na śródlądziu najważniejsze dla żeglarzy informacje dotyczą:",
         "correct_answer": "siły wiatru",
         "incorrect_answer_1": "temperatury",
         "incorrect_answer_2": "nadciągających nad Polskę mas powietrza"

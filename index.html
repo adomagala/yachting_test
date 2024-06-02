@@ -79,62 +79,46 @@
         return array.sort(() => Math.random() - 0.5);
     }
 
+    function setQuestion() {
+        questionText = questionsList[questionId].content;
+        correctAnswer = questionsList[questionId].correct_answer;
+        incorrectAnswer1 = questionsList[questionId].incorrect_answer_1;
+        incorrectAnswer2 = questionsList[questionId].incorrect_answer_2;
+
+        answersList = simpleShuffle([correctAnswer, incorrectAnswer1, incorrectAnswer2]);
+
+        document.getElementById('question').innerText = questionText;
+
+        const answersContainer = document.getElementById('answers');
+        answersContainer.innerHTML = ''
+
+        answersList.forEach(answer => {
+            const button = document.createElement('button');
+            button.className = 'answer';
+            button.innerText = answer;
+            button.onclick = 'checkAnswer(this)';
+            button.isCorrectAnswer = (answer === correctAnswer)
+            answersContainer.appendChild(button);
+        });
+    }
+
     function nextQuestion() {
-        let nextQuestionId = questionId + 1;
-
-        if (nextQuestionId < questionsList.length) {
-            questionText = questionsList[nextQuestionId].content;
-            correctAnswer = questionsList[nextQuestionId].correct_answer;
-            incorrectAnswer1 = questionsList[nextQuestionId].incorrect_answer_1;
-            incorrectAnswer2 = questionsList[nextQuestionId].incorrect_answer_2;
-
-            answersList = simpleShuffle([correctAnswer, incorrectAnswer1, incorrectAnswer2]);
-
+        if (questionId < questionsList.length - 1) {
             questionId += 1;
-
-            document.getElementById('question').innerText = questionText;
-
-            const answersContainer = document.getElementById('answers');
-            answersContainer.innerHTML = ''
-
-            answersList.forEach(answer => {
-                const button = document.createElement('button');
-                button.className = 'answer';
-                button.innerText = answer;
-                // button.onclick = () => selectAnswer(answer);
-                answersContainer.appendChild(button);
-            });
+            setQuestion()
         }
     }
 
     function previousQuestion() {
-        let previousQuestionId = questionId - 1;
-
-        if (nextQuestionId >= 0) {
-            questionText = questionsList[previousQuestionId].content;
-            correctAnswer = questionsList[previousQuestionId].correct_answer;
-            incorrectAnswer1 = questionsList[previousQuestionId].incorrect_answer_1;
-            incorrectAnswer2 = questionsList[previousQuestionId].incorrect_answer_2;
-
-            answersList = simpleShuffle([correctAnswer, incorrectAnswer1, incorrectAnswer2]);
-
+        if (questionId > 0) {
             questionId -= 1;
-
-            document.getElementById('question').innerText = questionText;
-
-            const answersContainer = document.getElementById('answers');
-            answersContainer.innerHTML = ''
-
-            answersList.forEach(answer => {
-                const button = document.createElement('button');
-                button.className = 'answer';
-                button.innerText = answer;
-                // button.onclick = () => selectAnswer(answer);
-                answersContainer.appendChild(button);
-            });
+            setQuestion()
         }
     }
 
+    function checkAnswer(clickedButton) {
+
+    }
 
 </script>
 
