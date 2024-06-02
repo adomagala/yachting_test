@@ -2,23 +2,81 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .answer {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .answer:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+        <meta charset="UTF-8">
     <title>Moja Strona</title>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('all_questions.json')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('json-content').innerText = JSON.stringify(data, null, 2);
-                })
-                .catch(error => {
-                    console.error('Error fetching JSON:', error);
-                    document.getElementById('json-content').innerText = 'Błąd ładowania pliku JSON.';
-                });
-        });
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     fetch('all_questions.json')
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             document.getElementById('json-content').innerText = JSON.stringify(data, null, 2);
+        //         })
+        //         .catch(error => {
+        //             console.error('Error fetching JSON:', error);
+        //             document.getElementById('json-content').innerText = 'Błąd ładowania pliku JSON.';
+        //         });
+        // });
     </script>
 </head>
 <body>
-    <h1>Stała wartość: 42</h1>
-    <pre id="json-content">Ładowanie...</pre>
+    <div class="container">
+        <h1>Jakie jest Twoje ulubione zwierzę?</h1>
+        <button class="answer" onclick="selectAnswer('Pies')">Pies</button>
+        <button class="answer" onclick="selectAnswer('Kot')">Kot</button>
+        <button class="answer" onclick="selectAnswer('Królik')">Królik</button>
+        <div id="result" class="result"></div>
+    </div>
+    <script>
+        function selectAnswer(answer) {
+            document.getElementById('result').innerText = `Wybrałeś: ${answer}`;
+        }
+    </script>
 </body>
 </html>
+
