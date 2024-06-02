@@ -118,7 +118,7 @@
 
             answersList = simpleShuffle([correctAnswer, incorrectAnswer1, incorrectAnswer2]);
 
-            questionId += 1;
+            questionId -= 1;
 
             document.getElementById('question').innerText = questionText;
 
@@ -136,6 +136,7 @@
     }
 
     window.onload = function () {
+        alert("Metoda została wykonana po załadowaniu strony!");
         nextQuestion();
     };
 
