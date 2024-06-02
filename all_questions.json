@@ -346,7 +346,7 @@
         "title": "Przepisy Śródlądowe",
         "description": "ŻJ - Przepisy Śródlądowe",
         "group": "1 - definicje uprawnienia war. dopuszczenia do egz. etykieta",
-        "content": " Określenie kierunku w &#8222;górę&#8221; na głównym szlaku Wielkich Jezior Mazurskich oznacza ruch w kierunku:",
+        "content": " Określenie kierunku w  „górę” na głównym szlaku Wielkich Jezior Mazurskich oznacza ruch w kierunku:",
         "correct_answer": "miejscowości Pisz",
         "incorrect_answer_1": "miejscowości Węgorzewo",
         "incorrect_answer_2": "miejscowości Ruciane-Nida"
@@ -5923,7 +5923,7 @@
         "title": "Meteorologia",
         "description": "ŻJ - Meteorologia",
         "group": "3 - opis lub prędkość wiatru -> skala B",
-        "content": " Wiatr określany jako &#8222;bardzo silny sztorm&#8221; to:",
+        "content": " Wiatr określany jako  „bardzo silny sztorm” to:",
         "correct_answer": "10&deg;B",
         "incorrect_answer_1": "12&deg;B",
         "incorrect_answer_2": "9&deg;B"
@@ -7266,9 +7266,9 @@
         "description": "ŻJ - Ratownictwo",
         "group": "2 - Środki ratunkowe",
         "content": " W Systemie  Sygnalizacji Ostrzegawczej na Mazurach 90 błysków na minutę oznacza:",
-        "correct_answer": "&#8222;Niebezpieczeństwo&#8221; występowania burzy oraz silnego wiatru",
-        "incorrect_answer_1": "&#8222;Ostrzeżenie&#8221; zachowaj ostrożność",
-        "incorrect_answer_2": "&#8222;Uwaga&#8221; spodziewane burze i wiatr"
+        "correct_answer": " „Niebezpieczeństwo” występowania burzy oraz silnego wiatru",
+        "incorrect_answer_1": " „Ostrzeżenie” zachowaj ostrożność",
+        "incorrect_answer_2": " „Uwaga” spodziewane burze i wiatr"
     },
     {
         "test_id": "28",
@@ -7420,9 +7420,9 @@
         "description": "ŻJ - Ratownictwo",
         "group": "2 - Środki ratunkowe",
         "content": " W Systemie Sygnalizacji Ostrzegawczej na Mazurach 40 błysków na minutę oznacza:",
-        "correct_answer": "&#8222;Uwaga&#8221; spodziewane burze i wiatr",
-        "incorrect_answer_1": "&#8222;Niebezpieczeństwo&#8221; występowania burzy oraz silnego wiatru",
-        "incorrect_answer_2": "&#8222;Ostrzeżenie&#8221; zachowaj ostrożność"
+        "correct_answer": " „Uwaga” spodziewane burze i wiatr",
+        "incorrect_answer_1": " „Niebezpieczeństwo” występowania burzy oraz silnego wiatru",
+        "incorrect_answer_2": " „Ostrzeżenie” zachowaj ostrożność"
     },
     {
         "test_id": "28",
