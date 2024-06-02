@@ -115,7 +115,7 @@
         "title": "Przepisy Śródlądowe",
         "description": "ŻJ - Przepisy Śródlądowe",
         "group": "1 - definicje uprawnienia war. dopuszczenia do egz. etykieta",
-        "content": " Termin &quot;wypadek żeglugowy&quot; oznacza:",
+        "content": " Termin \"wypadek żeglugowy\" oznacza:",
         "correct_answer": "zniszczenie znaków nawigacyjnych, uszkodzenie mienia, utrata życia, uszczerbek na zdrowiu na skutek zdarzenia zawiązanego z ruchem lub postojem statku",
         "incorrect_answer_1": "zacumowanie w miejscu niedozwolonym",
         "incorrect_answer_2": "utrata osprzętu jachtu na skutek kradzieży"
@@ -192,7 +192,7 @@
         "title": "Przepisy Śródlądowe",
         "description": "ŻJ - Przepisy Śródlądowe",
         "group": "1 - definicje uprawnienia war. dopuszczenia do egz. etykieta",
-        "content": " Na śródlądowych drogach wodnych, stojących ruch statku &quot;w górę&quot; oznacza, chyba że przepisy lokalne mówią inaczej:",
+        "content": " Na śródlądowych drogach wodnych, stojących ruch statku \"w górę\" oznacza, chyba że przepisy lokalne mówią inaczej:",
         "correct_answer": "poruszania się statku z północy na południe lub z zachodu na wschód",
         "incorrect_answer_1": "poruszania się statku z południa na północ lub z zachodu na wschód",
         "incorrect_answer_2": "poruszania się statku z północy na południe lub ze wschodu na zachód"
@@ -293,7 +293,7 @@
         "group": "1 - definicje uprawnienia war. dopuszczenia do egz. etykieta",
         "content": " Obowiązujące przepisy żeglugowe:",
         "correct_answer": "zabraniają uszkadzania budowli i urządzeń wodnych",
-        "incorrect_answer_1": "traktowania boi farwaterowych jak &quot;muringów&quot;",
+        "incorrect_answer_1": "traktowania boi farwaterowych jak \"muringów\"",
         "incorrect_answer_2": "nie regulują kwestii związanych z zanieczyszczeniem dróg wodnych"
     },
     {
@@ -644,9 +644,9 @@
         "description": "ŻJ - Przepisy Śródlądowe",
         "group": "6 - Oznakowanie statkow",
         "content": " Światło rufowe to światło oświetlające nieprzerwanie łuk widnokręgu o kącie:",
-        "correct_answer": "135&deg;",
-        "incorrect_answer_1": "225&deg;",
-        "incorrect_answer_2": "112,5&deg;"
+        "correct_answer": "135°",
+        "incorrect_answer_1": "225°",
+        "incorrect_answer_2": "112,5°"
     },
     {
         "test_id": "7",
@@ -842,7 +842,7 @@
         "description": "ŻJ - Przepisy Śródlądowe",
         "group": "2 - Prawo drogi",
         "content": " Dwa statki są holowane na linie z tego samego brzegu, ale w przeciwnych kierunkach, na drodze wodnej o określonym kierunku. Wg przepisów prawo drogi posiada:",
-        "correct_answer": "holowany &quot;w dół&quot; szlaku żeglownego",
+        "correct_answer": "holowany \"w dół\" szlaku żeglownego",
         "incorrect_answer_1": "holowany przez mniejszą liczbę osób",
         "incorrect_answer_2": "holowany na dłuższej linie"
     },
@@ -1237,7 +1237,7 @@
         "title": "Przepisy Śródlądowe",
         "description": "ŻJ - Przepisy Śródlądowe",
         "group": "1 - definicje uprawnienia war. dopuszczenia do egz. etykieta",
-        "content": " Wywieszenie pod lewym salingiem flagi &quot;A&quot; Międzynarodowego Kodu Sygnałowego oznacza:",
+        "content": " Wywieszenie pod lewym salingiem flagi \"A\" Międzynarodowego Kodu Sygnałowego oznacza:",
         "correct_answer": "mam nurka pod wodą, trzymajcie się ode mnie z daleka, idźcie po woli",
         "incorrect_answer_1": "stoję na kotwicy",
         "incorrect_answer_2": "wzywa pomocy"
@@ -1403,9 +1403,9 @@
         "description": "ŻJ - Przepisy Śródlądowe",
         "group": "6 - Oznakowanie statkow",
         "content": " Światło masztowe to światło oświetlające nieprzerwanie łuk widnokręgu o kącie:",
-        "correct_answer": "225&deg;",
-        "incorrect_answer_1": "120&deg;",
-        "incorrect_answer_2": "360&deg;"
+        "correct_answer": "225°",
+        "incorrect_answer_1": "120°",
+        "incorrect_answer_2": "360°"
     },
     {
         "test_id": "7",
@@ -1558,7 +1558,7 @@
         "group": "1 - definicje uprawnienia war. dopuszczenia do egz. etykieta",
         "content": " Osoba nie posiadająca patentu żeglarskiego:",
         "correct_answer": "może prowadzić jachty żaglowe o długości kadłuba do 7,5 m",
-        "incorrect_answer_1": "może prowadzić jachty o powierzchni ożaglowania do 20 m&lt;sup&gt;2&lt;/sup&gt;",
+        "incorrect_answer_1": "może prowadzić jachty o powierzchni ożaglowania do 20 m2",
         "incorrect_answer_2": "nie może samodzielnie prowadzić jachtu żaglowego."
     },
     {
@@ -3185,9 +3185,9 @@
         "description": "ŻJ - Teoria żeglowania",
         "group": "6 - Ster, miecz, stateczność",
         "content": " Moment prostujący jachtu balastowego ma wartość dodatnią dla kąta przechyłu w granicach:",
-        "correct_answer": "0&deg; - 90&deg;",
-        "incorrect_answer_1": "90&deg; 110&deg;",
-        "incorrect_answer_2": "120&deg;- 140&deg;"
+        "correct_answer": "0° - 90°",
+        "incorrect_answer_1": "90° 110°",
+        "incorrect_answer_2": "120°- 140°"
     },
     {
         "test_id": "29",
@@ -3239,7 +3239,7 @@
         "title": "Teoria żeglowania",
         "description": "ŻJ - Teoria żeglowania",
         "group": "3 - Siła aero i hydro",
-        "content": " Podniesienie miecza o &#188; do góry podczas żeglugi bajdewindem przy sile wiatru powyżej 5&deg;B spowoduje:",
+        "content": " Podniesienie miecza o 1/4 do góry podczas żeglugi bajdewindem przy sile wiatru powyżej 5°B spowoduje:",
         "correct_answer": "zmniejszenie przechyłu",
         "incorrect_answer_1": "jacht stanie się bardziej nawietrzny",
         "incorrect_answer_2": "zmniejszenie dryfu"
@@ -3272,7 +3272,7 @@
         "title": "Teoria żeglowania",
         "description": "ŻJ - Teoria żeglowania",
         "group": "3 - Siła aero i hydro",
-        "content": " Ustawienie żagli &quot;na motyla&quot; w fordewindzie na jachcie typu slup umożliwia:",
+        "content": " Ustawienie żagli \"na motyla\" w fordewindzie na jachcie typu slup umożliwia:",
         "correct_answer": "poprawną pracę obu żagli",
         "incorrect_answer_1": "osiągnięcie trwałego zrównoważenia żaglowego",
         "incorrect_answer_2": "wzajemne zakłócanie pracy żagli"
@@ -3371,7 +3371,7 @@
         "title": "Teoria żeglowania",
         "description": "ŻJ - Teoria żeglowania",
         "group": "6 - Ster, miecz, stateczność",
-        "content": " Podniesienie miecza o 1/4 do góry podczas żeglugi bajdewindem przy sile wiatru powyżej 4&deg;B spowoduje:",
+        "content": " Podniesienie miecza o 1/4 do góry podczas żeglugi bajdewindem przy sile wiatru powyżej 4°B spowoduje:",
         "correct_answer": "zmniejszenie przechyłu",
         "incorrect_answer_1": "zmniejszenie dryfu",
         "incorrect_answer_2": "zmianę położenia ŚO"
@@ -3406,7 +3406,7 @@
         "group": "4 - Zrównoważenie żagl. SO",
         "content": " Aby zmniejszyć nawietrzność jachtu można:",
         "correct_answer": "zrzucić grota",
-        "incorrect_answer_1": "wybrać grota &quot;na blachę&quot;",
+        "incorrect_answer_1": "wybrać grota \"na blachę\"",
         "incorrect_answer_2": "zrzucić foka"
     },
     {
@@ -3482,9 +3482,9 @@
         "description": "ŻJ - Teoria żeglowania",
         "group": "6 - Ster, miecz, stateczność",
         "content": " Moment krytyczny jachtu mieczowego występuje przy kącie przechyłu około:",
-        "correct_answer": "60&deg;-80&deg;",
-        "incorrect_answer_1": "120&deg;",
-        "incorrect_answer_2": "90&deg;"
+        "correct_answer": "60°-80°",
+        "incorrect_answer_1": "120°",
+        "incorrect_answer_2": "90°"
     },
     {
         "test_id": "29",
@@ -3503,7 +3503,7 @@
         "title": "Teoria żeglowania",
         "description": "ŻJ - Teoria żeglowania",
         "group": "3 - Siła aero i hydro",
-        "content": " Na jachcie płynącym bajdewindem zwiększono wybrzuszenie grotżagla &#8211; spowoduje to:",
+        "content": " Na jachcie płynącym bajdewindem zwiększono wybrzuszenie grotżagla – spowoduje to:",
         "correct_answer": "zmniejszenie prędkości jachtu i spadek wartości siły aerodynamicznej",
         "incorrect_answer_1": "zwiększenie prędkości jachtu i zwiększenie wartości siły aerodynamicznej",
         "incorrect_answer_2": "zwiększenie przechyłu jachtu"
@@ -3614,9 +3614,9 @@
         "description": "ŻJ - Teoria żeglowania",
         "group": "6 - Ster, miecz, stateczność",
         "content": " Największy moment prostujący jachtu mieczowego występuje przy kącie przechyłu około:",
-        "correct_answer": "30&deg;- 45&deg;",
-        "incorrect_answer_1": "90&deg;",
-        "incorrect_answer_2": "10&deg;- 50&deg;"
+        "correct_answer": "30°- 45°",
+        "incorrect_answer_1": "90°",
+        "incorrect_answer_2": "10°- 50°"
     },
     {
         "test_id": "29",
@@ -5310,7 +5310,7 @@
         "title": "Locja śródlądowa",
         "description": "ŻJ - Locja śródlądowa",
         "group": "6 - Informacje pomocnicze",
-        "content": " Flaga &quot;A&quot; Międzynarodowego Kodu Sygnałowego oznacza:",
+        "content": " Flaga \"A\" Międzynarodowego Kodu Sygnałowego oznacza:",
         "correct_answer": "mam nurka pod wodą, omijajcie mnie z daleka",
         "incorrect_answer_1": "jednostka stoi na kotwicy",
         "incorrect_answer_2": "statek pełniący służbę pilotową"
@@ -5791,10 +5791,10 @@
         "title": "Meteorologia",
         "description": "ŻJ - Meteorologia",
         "group": "3 - opis lub prędkość wiatru -> skala B",
-        "content": " Wiatr określany w ogólnych prognozach pogody jako wiatr &quot;umiarkowany&quot;, to wiatr o sile:",
-        "correct_answer": "4&deg;B",
-        "incorrect_answer_1": "7&deg;B",
-        "incorrect_answer_2": "2&deg;B"
+        "content": " Wiatr określany w ogólnych prognozach pogody jako wiatr \"umiarkowany\", to wiatr o sile:",
+        "correct_answer": "4°B",
+        "incorrect_answer_1": "7°B",
+        "incorrect_answer_2": "2°B"
     },
     {
         "test_id": "4",
@@ -5924,9 +5924,9 @@
         "description": "ŻJ - Meteorologia",
         "group": "3 - opis lub prędkość wiatru -> skala B",
         "content": " Wiatr określany jako  „bardzo silny sztorm” to:",
-        "correct_answer": "10&deg;B",
-        "incorrect_answer_1": "12&deg;B",
-        "incorrect_answer_2": "9&deg;B"
+        "correct_answer": "10°B",
+        "incorrect_answer_1": "12°B",
+        "incorrect_answer_2": "9°B"
     },
     {
         "test_id": "4",
@@ -6099,10 +6099,10 @@
         "title": "Meteorologia",
         "description": "ŻJ - Meteorologia",
         "group": "3 - opis lub prędkość wiatru -> skala B",
-        "content": " Wiatr określany w ogólnych prognozach pogody jako  &quot;sztorm&quot;, to wiatr o sile:",
-        "correct_answer": "8&deg;",
-        "incorrect_answer_1": "6&deg;",
-        "incorrect_answer_2": "7&deg;"
+        "content": " Wiatr określany w ogólnych prognozach pogody jako  \"sztorm\", to wiatr o sile:",
+        "correct_answer": "8°",
+        "incorrect_answer_1": "6°",
+        "incorrect_answer_2": "7°"
     },
     {
         "test_id": "4",
@@ -6220,10 +6220,10 @@
         "title": "Meteorologia",
         "description": "ŻJ - Meteorologia",
         "group": "3 - opis lub prędkość wiatru -> skala B",
-        "content": " Wiatr określany w ogólnych prognozach pogody jako wiatr &quot;słaby&quot;, to wiatr o sile:",
-        "correct_answer": "2&deg;B",
-        "incorrect_answer_1": "6&deg;B",
-        "incorrect_answer_2": "4&deg;B"
+        "content": " Wiatr określany w ogólnych prognozach pogody jako wiatr \"słaby\", to wiatr o sile:",
+        "correct_answer": "2°B",
+        "incorrect_answer_1": "6°B",
+        "incorrect_answer_2": "4°B"
     },
     {
         "test_id": "4",
@@ -6297,10 +6297,10 @@
         "title": "Meteorologia",
         "description": "ŻJ - Meteorologia",
         "group": "3 - opis lub prędkość wiatru -> skala B",
-        "content": " Wiatr określany w ogólnych prognozach pogody jako &quot;sztorm&quot; to wiatr o sile:",
-        "correct_answer": "8&deg;B",
-        "incorrect_answer_1": "7&deg;B",
-        "incorrect_answer_2": "6&deg;B"
+        "content": " Wiatr określany w ogólnych prognozach pogody jako \"sztorm\" to wiatr o sile:",
+        "correct_answer": "8°B",
+        "incorrect_answer_1": "7°B",
+        "incorrect_answer_2": "6°B"
     },
     {
         "test_id": "4",
@@ -6330,10 +6330,10 @@
         "title": "Meteorologia",
         "description": "ŻJ - Meteorologia",
         "group": "3 - opis lub prędkość wiatru -> skala B",
-        "content": " Wiatr określany w ogólnych prognozach pogody jako wiatr &quot;silny&quot;, to wiatr o sile:",
-        "correct_answer": "6&deg;B",
-        "incorrect_answer_1": "12&deg;B",
-        "incorrect_answer_2": "4&deg;B"
+        "content": " Wiatr określany w ogólnych prognozach pogody jako wiatr \"silny\", to wiatr o sile:",
+        "correct_answer": "6°B",
+        "incorrect_answer_1": "12°B",
+        "incorrect_answer_2": "4°B"
     },
     {
         "test_id": "4",
@@ -6716,9 +6716,9 @@
         "description": "ŻJ - Meteorologia",
         "group": "3 - opis lub prędkość wiatru -> skala B",
         "content": " Wiatr o prędkości powyżej 90 km/h to wiatr o sile:",
-        "correct_answer": "10&deg;B",
-        "incorrect_answer_1": "12&deg;B",
-        "incorrect_answer_2": "8&deg;B"
+        "correct_answer": "10°B",
+        "incorrect_answer_1": "12°B",
+        "incorrect_answer_2": "8°B"
     },
     {
         "test_id": "4",
@@ -6880,7 +6880,7 @@
         "title": "Ratownictwo",
         "description": "ŻJ - Ratownictwo",
         "group": "1 - Wywrotka",
-        "content": " Jeżeli chcemy zapobiec odwróceniu małego jachtu masztem w dół czyli tzw. &quot;grzybkowi&quot; po wywrotce jachtu, należy:",
+        "content": " Jeżeli chcemy zapobiec odwróceniu małego jachtu masztem w dół czyli tzw. \"grzybkowi\" po wywrotce jachtu, należy:",
         "correct_answer": "podłożyć wolne koło pod top masztu",
         "incorrect_answer_1": "podłożyć wolny kapok pod piętę maszty",
         "incorrect_answer_2": "przywiązać wolny kapok do urządzenia sterowego"
@@ -6902,7 +6902,7 @@
         "title": "Ratownictwo",
         "description": "ŻJ - Ratownictwo",
         "group": "5 - Człowiek za burtą",
-        "content": " Podczas wykonywania manewru &quot;człowiek za burtą&quot; należy:",
+        "content": " Podczas wykonywania manewru \"człowiek za burtą\" należy:",
         "correct_answer": "cały czas obserwować jego pozycję",
         "incorrect_answer_1": "pomachać człowiekowi na do widzenia",
         "incorrect_answer_2": "skoczyć za nim"
@@ -7089,7 +7089,7 @@
         "title": "Ratownictwo",
         "description": "ŻJ - Ratownictwo",
         "group": "6 - Przechłodzenie",
-        "content": " &quot;Oszczędność&quot; ruchów człowieka w zimnej wodzie sprzyja:",
+        "content": " \"Oszczędność\" ruchów człowieka w zimnej wodzie sprzyja:",
         "correct_answer": "wydłużeniu czasu przeżycia",
         "incorrect_answer_1": "polepszeniu samopoczucia",
         "incorrect_answer_2": "skróceniu czasu przeżycia"
