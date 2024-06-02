@@ -43,6 +43,54 @@
             font-size: 16px;
         }
 
+        .answer-selected-correct {
+            background-color: green;
+            color: white;
+            border: 2px solid #0056b3;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .answer-correct {
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .answer-selected-incorrect {
+            background-color: red;
+            color: white;
+            border: 2px solid #0056b3;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .answer-selected-incorrect {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
         .answer:hover {
             background-color: #0056b3;
         }
@@ -154,9 +202,25 @@
     }
 
     function checkAnswer(clickedButton) {
-        clickedButton.style.fontWeight = "bold";
+        const answersContainer = document.getElementById('answers');
 
-        colorAnswers();
+        var buttons = answersContainer.querySelectorAll("button");
+
+        buttons.forEach(function (button) {
+            if (button.getAttribute('is_correct_answer') === 'true') {
+                button.className = 'answer-correct';
+            } else {
+                button.className = 'answer-incorrect';
+            }
+
+            button.setAttribute('onclick', '');
+        });
+
+        if (clickedButton.getAttribute('is_correct_answer') === 'true') {
+            clickedButton.className = 'answer-selected-correct';
+        } else {
+            clickedButton.className = 'answer-selected-incorrect';
+        }
     }
 
 </script>
@@ -164,7 +228,7 @@
 <div class="container">
     <h1 id="question"></h1>
     <div id="answers"></div>
-    <div id="navigation-buttons">
+    <div class="navigation-buttons">
         <button id="previousButton" onclick="previousQuestion()">Poprzednie pytanie</button>
         <button id="nextButton" onclick="nextQuestion()">Nastepne pytanie</button>
     </div>
