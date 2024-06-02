@@ -97,7 +97,7 @@
             button.className = 'answer';
             button.innerText = answer;
             button.setAttribute('onclick', 'checkAnswer(this)');
-            button.setAttribute('isCorrectAnswer', (correctAnswer === answer));
+            button.setAttribute('is_correct_answer', (correctAnswer === answer));
             answersContainer.appendChild(button);
         });
     }
@@ -117,8 +117,7 @@
     }
 
     function checkAnswer(clickedButton) {
-        let answerButton = document.getElementById(clickedButton.id);
-        answerButton.style.fontWeight = "bold";
+        clickedButton.style.fontWeight = "bold";
     }
 
 </script>
