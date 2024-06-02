@@ -96,8 +96,8 @@
             const button = document.createElement('button');
             button.className = 'answer';
             button.innerText = answer;
-            button.onclick = 'checkAnswer(this)';
-            button.isCorrectAnswer = (answer === correctAnswer)
+            button.setAttribute('onclick', 'checkAnswer(this)');
+            button.setAttribute('isCorrectAnswer', (correctAnswer === answer));
             answersContainer.appendChild(button);
         });
     }
