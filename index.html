@@ -51,18 +51,19 @@
         <meta charset="UTF-8">
     <title>Moja Strona</title>
     <script>
-        // document.addEventListener("DOMContentLoaded", function() {
-        //     fetch('all_questions.json')
-        //         .then(response => response.json())
-        //         .then(data => {
-        //             document.getElementById('json-content').innerText = JSON.stringify(data, null, 2);
-        //         })
-        //         .catch(error => {
-        //             console.error('Error fetching JSON:', error);
-        //             document.getElementById('json-content').innerText = 'Błąd ładowania pliku JSON.';
-        //         });
-        // });
+        let questionsList = [];
 
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('all_questions.json')
+                .then(response => response.json())
+                .then(data => {
+                    questionsList = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching JSON:', error);
+                    document.getElementById('question').innerText = 'Błąd ładowania pytania.';
+                });
+        });
     </script>
 </head>
 <body>
@@ -72,29 +73,29 @@
         <div id="result" class="result"></div>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('all_questions.json')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('question').innerText = data[0].content;
-                    const answersContainer = document.getElementById('answers');
-                    // data[].answers.forEach(answer => {
-                    //     const button = document.createElement('button');
-                    //     button.className = 'answer';
-                    //     button.innerText = answer;
-                    //     button.onclick = () => selectAnswer(answer);
-                    //     answersContainer.appendChild(button);
-                    // });
-                })
-                .catch(error => {
-                    console.error('Error fetching JSON:', error);
-                    document.getElementById('question').innerText = 'Błąd ładowania pytania.';
-                });
-        });
-
-        function selectAnswer(answer) {
-            document.getElementById('result').innerText = `Wybrałeś: ${answer}`;
-        }
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     fetch('all_questions.json')
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             document.getElementById('question').innerText = data[0].content;
+        //             const answersContainer = document.getElementById('answers');
+        //             // data[].answers.forEach(answer => {
+        //             //     const button = document.createElement('button');
+        //             //     button.className = 'answer';
+        //             //     button.innerText = answer;
+        //             //     button.onclick = () => selectAnswer(answer);
+        //             //     answersContainer.appendChild(button);
+        //             // });
+        //         })
+        //         .catch(error => {
+        //             console.error('Error fetching JSON:', error);
+        //             document.getElementById('question').innerText = 'Błąd ładowania pytania.';
+        //         });
+        // });
+        //
+        // function selectAnswer(answer) {
+        //     document.getElementById('result').innerText = `Wybrałeś: ${answer}`;
+        // }
     </script>
 </body>
 </html>
