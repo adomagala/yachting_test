@@ -135,17 +135,16 @@
         }
     }
 
-    window.onload = function () {
-        alert("Metoda została wykonana po załadowaniu strony!");
-        nextQuestion();
-    };
 
 </script>
 
 <div class="container">
-    <h1 id="question">Ładowanie pytania...</h1>
+    <h1 id="question"></h1>
     <div id="answers"></div>
-    <div id="result" class="result"></div>
+    <div id="question_management">
+        <button onclick="nextQuestion()">Nastepne pytanie</button>
+        <button onclick="previousQuestion()">Poprzednie pytanie</button>
+    </div>
 </div>
 </body>
 </html>
