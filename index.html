@@ -233,7 +233,11 @@
                 var categoryName = category.innerText;
 
                 var categoryInfo = allQuestionCategoryInfo.find(item => item.category === categoryName);
-                chosenQuestionCategoryInfo.push(categoryInfo);
+                chosenQuestionCategoryInfo.push({
+                            'category': categoryInfo.category,
+                            'firstId': chosenQuestionsList.length + categoryInfo.firstId,
+                            'numberQuestions': categoryInfo.numberQuestions
+                        });
 
                 for (var i = categoryInfo.firstId; i < categoryInfo.firstId + categoryInfo.numberQuestions; i++) {
                     chosenQuestionsList.push(allQuestionsList[i]);
