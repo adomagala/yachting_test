@@ -59,6 +59,10 @@
         } else {
             img.style.display = 'none';
         }
+
+        categoryName = questionsList[questionId].category;
+        var category = document.getElementById('category');
+        category.innerText = categoryName;
     }
 
     function nextQuestion() {
@@ -116,6 +120,16 @@
 </script>
 
 <div class="container">
+    <div id="information">
+        <div style="display: inline">
+            <div><b>Kategoria:</b> </div>
+            <div id="category"></div>
+        </div>
+        <div style="display: inline">
+            <div><b>Pytanie:</b> </div>
+            <div id="question-number"></div>
+        </div>
+    </div>
     <h1 id="question"></h1>
     <img id="question-img"/>
     <div id="answers"></div>
