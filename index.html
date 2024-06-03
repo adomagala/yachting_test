@@ -53,7 +53,7 @@
         questionImg = questionsList[questionId].image
         var img = document.getElementById('question-img');
 
-        if (!questionImg) {
+        if (!!questionImg) {
             img.src = questionImg;
             img.style.display = 'block';
         } else {
