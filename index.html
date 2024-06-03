@@ -9,9 +9,12 @@
 <body>
 
 <script>
-    var questionsList = [];
-    var allQuestionCategoryInfo = []
-    var questionId = -1
+    var allQuestionsList = [];
+    var allQuestionCategoryInfo = [];
+
+    var questionId = -1;
+    var chosenQuestionsList = [];
+    var chosenQuestionCategoryInfo = [];
 
     function changeCategory(clickedButton) {
         if (clickedButton.className === 'category-selected') {
@@ -40,7 +43,7 @@
         fetch('all_questions.json')
             .then(response => response.json())
             .then(data => {
-                questionsList = data.sort((a, b) => {
+                allQuestionsList = data.sort((a, b) => {
                     if (parseInt(a.test_id) < parseInt(b.test_id)) {
                         return -1;
                     }
@@ -57,11 +60,11 @@
                     return 0;
                 });
 
-                var lastCategory = questionsList[0].category;
+                var lastCategory = allQuestionsList[0].category;
                 var firstQuestion = 0;
 
-                for (var i = 0; i < questionsList.length; i++) {
-                    if (lastCategory !== questionsList[i].category || i === questionsList.length - 1) {
+                for (var i = 0; i < allQuestionsList.length; i++) {
+                    if (lastCategory !== allQuestionsList[i].category || i === allQuestionsList.length - 1) {
                         allQuestionCategoryInfo.push({
                             'category': lastCategory,
                             'firstId': firstQuestion,
@@ -82,10 +85,10 @@
     }
 
     function setQuestion() {
-        questionText = questionsList[questionId].content;
-        correctAnswer = questionsList[questionId].correct_answer;
-        incorrectAnswer1 = questionsList[questionId].incorrect_answer_1;
-        incorrectAnswer2 = questionsList[questionId].incorrect_answer_2;
+        questionText = chosenQuestionsList[questionId].content;
+        correctAnswer = chosenQuestionsList[questionId].correct_answer;
+        incorrectAnswer1 = chosenQuestionsList[questionId].incorrect_answer_1;
+        incorrectAnswer2 = chosenQuestionsList[questionId].incorrect_answer_2;
 
         answersList = simpleShuffle([correctAnswer, incorrectAnswer1, incorrectAnswer2]);
 
@@ -103,7 +106,7 @@
             answersContainer.appendChild(button);
         });
 
-        questionImg = questionsList[questionId].image
+        questionImg = chosenQuestionsList[questionId].image
         var img = document.getElementById('question-img');
 
         if (!!questionImg) {
@@ -113,38 +116,26 @@
             img.style.display = 'none';
         }
 
-        categoryName = questionsList[questionId].category;
+        categoryName = chosenQuestionsList[questionId].category;
         var category = document.getElementById('category');
         category.innerText = categoryName;
 
-        subCategoryName = questionsList[questionId].subcategory;
+        subCategoryName = chosenQuestionsList[questionId].subcategory;
         var subcategory = document.getElementById('subcategory');
         subcategory.innerText = subCategoryName;
 
-        var questionNumbers = 0;
+        var categoryInfo = chosenQuestionCategoryInfo.find(item => item.category === categoryName);
 
-        questionsList.forEach(question => {
-            qCategory = question.category;
+        var questionNumbers = categoryInfo.numberQuestions;
 
-            if (qCategory === categoryName) {
-                questionNumbers++;
-            }
-        });
-
-        var currentQuestionId = 0;
-
-        for (let i = 0; i <= questionId; i++) {
-            if (questionsList[i].category === categoryName) {
-                currentQuestionId++;
-            }
-        }
+        var currentQuestionId = questionId - categoryInfo.firstId + 1;
 
         var questionNumberDiv = document.getElementById('question-number');
         questionNumberDiv.innerText = '' + currentQuestionId + ' / ' + questionNumbers;
     }
 
     function nextQuestion() {
-        if (questionId < questionsList.length - 1) {
+        if (questionId < chosenQuestionsList.length - 1) {
             questionId++;
             setQuestion()
         }
@@ -154,7 +145,7 @@
             previousButton.hidden = false;
         }
 
-        if (questionId === questionsList.length - 1) {
+        if (questionId === chosenQuestionsList.length - 1) {
             var nextButton = document.getElementById("nextButton");
             nextButton.hidden = true;
         }
@@ -171,7 +162,7 @@
             previousButton.hidden = true;
         }
 
-        if (questionId < questionsList.length - 1) {
+        if (questionId < chosenQuestionsList.length - 1) {
             var nextButton = document.getElementById("nextButton");
             nextButton.hidden = false;
         }
@@ -210,6 +201,24 @@
         var previousButton = document.getElementById("previousButton");
         previousButton.hidden = true;
 
+        questionId = -1;
+        chosenQuestionsList = [];
+        chosenQuestionCategoryInfo = [];
+
+        var testContainer = document.getElementById("test-container");
+        testContainer.forEach(category => {
+            if (category.className === 'category-selected') {
+                var categoryName = category.innerText;
+
+                var categoryInfo = chosenQuestionCategoryInfo.find(item => item.category === categoryName);
+                chosenQuestionCategoryInfo.push(categoryInfo);
+
+                for (var i = categoryInfo.firstId; i < categoryInfo.firstId + categoryInfo.numberQuestions; i++) {
+                    chosenQuestionsList.push(allQuestionsList[i]);
+                }
+            }
+        });
+
         nextQuestion();
     }
 
@@ -223,10 +232,11 @@
 
 </script>
 <div id="test-container" style="display: none">
+    <h1>Wybrane kategorie do testu</h1>
     <div id="menu" class="container">
         <div id="category-list">
         </div>
-        <button onclick="startTest()">Rozpocznij test</button>
+        <button id="start-test" onclick="startTest()">Rozpocznij test</button>
     </div>
 
     <div id="test" class="container" style="display: none">
