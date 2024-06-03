@@ -10,9 +10,24 @@
 
 <script>
     var questionsList = [];
-    var questionCategoryInfo = []
+    var allQuestionCategoryInfo = []
     var questionId = -1
 
+    function showWebsite() {
+        var testContainer = document.getElementById("test-container");
+        testContainer.style.display = '';
+
+        const categoryList = document.getElementById('category-list');
+
+        allQuestionCategoryInfo.forEach(category => {
+            const button = document.createElement('button');
+            button.className = 'answer';
+            button.innerText = category.category;
+            // button.setAttribute('onclick', 'checkAnswer(this)');
+            // button.setAttribute('is_correct_answer', (correctAnswer === answer));
+            categoryList.appendChild(button);
+        });
+    }
 
     document.addEventListener("DOMContentLoaded", function () {
         fetch('all_questions.json')
@@ -40,7 +55,7 @@
 
                 for (var i = 0; i < questionsList.length; i++) {
                     if (lastCategory !== questionsList[i].category || i === questionsList.length - 1) {
-                        questionCategoryInfo.push({
+                        allQuestionCategoryInfo.push({
                             'category': lastCategory,
                             'firstId': firstQuestion,
                             'numberQuestions': i - firstQuestion
@@ -50,6 +65,8 @@
                         lastCategory = questionsList[i].category;
                     }
                 }
+
+                showWebsite();
             });
     });
 
@@ -68,7 +85,7 @@
         document.getElementById('question').innerText = questionText;
 
         const answersContainer = document.getElementById('answers');
-        answersContainer.innerHTML = ''
+        answersContainer.innerHTML = '';
 
         answersList.forEach(answer => {
             const button = document.createElement('button');
@@ -198,42 +215,46 @@
     }
 
 </script>
-
-<div id="menu" class="container">
-    <button onclick="startTest()">Rozpocznij test</button>
-</div>
-
-<div id="test" class="container" style="display: none">
-    <div id="information" style="display: grid">
-        <div style="display: inline">
-            <div style="float: left"><b>Kategoria:</b></div>
-            <div id="category" style="float: right"></div>
+<div id="test-container" style="display: none">
+    <div id="menu" class="container">
+        <div id="category-list">
         </div>
-        <div style="display: inline">
-            <div style="float: left"><b>Podkategoria:</b></div>
-            <div id="subcategory" style="float: right"></div>
-        </div>
-        <div style="display: inline">
-            <div style="float: left"><b>Numer:</b></div>
-            <div id="question-number" style="float: right"></div>
-        </div>
+        <button onclick="startTest()">Rozpocznij test</button>
     </div>
-    <h1 id="question"></h1>
-    <img id="question-img"/>
-    <div id="answers"></div>
 
-    <div style="margin-top: 50px; display: grid">
-        <div class="navigation-buttons">
-            <button id="previousButton" style="float: left" onclick="previousQuestion()">< Poprzednie pytanie</button>
-            <button id="nextButton" style="float: right" onclick="nextQuestion()">Nastepne pytanie ></button>
+    <div id="test" class="container" style="display: none">
+        <div id="information" style="display: grid">
+            <div style="display: inline">
+                <div style="float: left"><b>Kategoria:</b></div>
+                <div id="category" style="float: right"></div>
+            </div>
+            <div style="display: inline">
+                <div style="float: left"><b>Podkategoria:</b></div>
+                <div id="subcategory" style="float: right"></div>
+            </div>
+            <div style="display: inline">
+                <div style="float: left"><b>Numer:</b></div>
+                <div id="question-number" style="float: right"></div>
+            </div>
         </div>
-        <div class="navigation-buttons">
-            <button id="previousCategory" style="float: left" onclick="previousCategory()"><< Poprzednie kategoria
-            </button>
-            <button id="nextCategory" style="float: right" onclick="nextCategory()">Nastepne kategoria ></button>
-        </div>
-        <div class="navigation-buttons">
-            <button id="returnToMenu" onclick="returnToMenu()">Powrót do menu</button>
+        <h1 id="question"></h1>
+        <img id="question-img"/>
+        <div id="answers"></div>
+
+        <div style="margin-top: 50px; display: grid">
+            <div class="navigation-buttons">
+                <button id="previousButton" style="float: left" onclick="previousQuestion()">< Poprzednie pytanie
+                </button>
+                <button id="nextButton" style="float: right" onclick="nextQuestion()">Nastepne pytanie ></button>
+            </div>
+            <div class="navigation-buttons">
+                <button id="previousCategory" style="float: left" onclick="previousCategory()"><< Poprzednie kategoria
+                </button>
+                <button id="nextCategory" style="float: right" onclick="nextCategory()">Nastepne kategoria >></button>
+            </div>
+            <div class="navigation-buttons">
+                <button id="returnToMenu" onclick="returnToMenu()">Powrót do menu</button>
+            </div>
         </div>
     </div>
 </div>
