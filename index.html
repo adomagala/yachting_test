@@ -63,6 +63,10 @@
         categoryName = questionsList[questionId].category;
         var category = document.getElementById('category');
         category.innerText = categoryName;
+
+        subCategoryName = questionsList[questionId].subcategory;
+        var subcategory = document.getElementById('subcategory');
+        subcategory.innerText = subCategoryName;
     }
 
     function nextQuestion() {
@@ -124,6 +128,10 @@
         <div style="display: inline">
             <div><b>Kategoria:</b> </div>
             <div id="category"></div>
+        </div>
+        <div style="display: inline">
+            <div><b>Podkategoria:</b> </div>
+            <div id="subcategory"></div>
         </div>
         <div style="display: inline">
             <div><b>Pytanie:</b> </div>
