@@ -85,6 +85,10 @@ body {
             font-size: 16px;
         }
 
+        #answers {
+            margin-top: 15px;
+        }
+
         .answer:hover {
             background-color: #0056b3;
         }
