@@ -67,18 +67,39 @@
         subCategoryName = questionsList[questionId].subcategory;
         var subcategory = document.getElementById('subcategory');
         subcategory.innerText = subCategoryName;
+
+        var questionNumbers = 0;
+
+        questionsList.forEach(question => {
+            qCategory = question.category;
+
+            if (qCategory === categoryName) {
+                questionNumbers++;
+            }
+        });
+
+        var currentQuestionId = 0;
+
+        for (let i = 0; i <= questionId; i++) {
+            if (questionsList[i].category === categoryName) {
+                currentQuestionId++;
+            }
+        }
+
+        var questionNumberDiv = document.getElementById('question-number');
+        questionNumberDiv.innerText = '' + currentQuestionId + ' / ' + questionNumbers;
     }
 
     function nextQuestion() {
         if (questionId < questionsList.length - 1) {
-            questionId += 1;
+            questionId++;
             setQuestion()
         }
     }
 
     function previousQuestion() {
         if (questionId > 0) {
-            questionId -= 1;
+            questionId--;
             setQuestion()
         }
     }
