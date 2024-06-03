@@ -10,6 +10,7 @@
 
 <script>
     var questionsList = [];
+    var questionCategoryInfo = []
     var questionId = -1
 
 
@@ -158,9 +159,23 @@
         }
     }
 
+    function startTest() {
+        var menuDiv = answersContainer.querySelectorAll("menu");
+        menuDiv.style.visibility = 'hidden';
+
+        var testDiv = answersContainer.querySelectorAll("test");
+        testDiv.style.visibility = 'visible';
+
+        nextQuestion();
+    }
+
 </script>
 
-<div class="container">
+<div id="menu" class="container">
+    <button onclick="nextQuestion()">Rozpocznij test</button>
+</div>
+
+<div id="test" class="container" style="visibility: hidden">
     <div id="information" style="display: grid">
         <div style="display: inline">
             <div style="float: left"><b>Kategoria:</b></div>
