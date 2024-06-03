@@ -13,6 +13,14 @@
     var allQuestionCategoryInfo = []
     var questionId = -1
 
+    function changeCategory(clickedButton) {
+        if (clickedButton.className === 'category-selected') {
+            clickedButton.className = 'category-not-selected'
+        } else {
+            clickedButton.className = 'category-selected'
+        }
+    }
+
     function showWebsite() {
         var testContainer = document.getElementById("test-container");
         testContainer.style.display = '';
@@ -21,10 +29,9 @@
 
         allQuestionCategoryInfo.forEach(category => {
             const button = document.createElement('button');
-            button.className = 'answer';
+            button.className = 'category-selected';
             button.innerText = category.category;
-            // button.setAttribute('onclick', 'checkAnswer(this)');
-            // button.setAttribute('is_correct_answer', (correctAnswer === answer));
+            button.setAttribute('onclick', 'changeCategory(this)');
             categoryList.appendChild(button);
         });
     }
