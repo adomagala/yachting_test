@@ -232,7 +232,7 @@
             if (category.className === 'category-selected') {
                 var categoryName = category.innerText;
 
-                var categoryInfo = chosenQuestionCategoryInfo.find(item => item.category === categoryName);
+                var categoryInfo = allQuestionCategoryInfo.find(item => item.category === categoryName);
                 chosenQuestionCategoryInfo.push(categoryInfo);
 
                 for (var i = categoryInfo.firstId; i < categoryInfo.firstId + categoryInfo.numberQuestions; i++) {
