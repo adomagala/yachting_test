@@ -39,7 +39,7 @@ body {
         .answer-selected-correct {
             background-color: green;
             color: white;
-            border: 5px solid cadetblue;
+            border: 5px solid chartreuse;
             border-radius: 4px;
             padding: 10px;
             margin: 5px 0;
@@ -63,7 +63,7 @@ body {
         .answer-selected-incorrect {
             background-color: red;
             color: white;
-            border: 5px solid cadetblue;
+            border: 5px solid chartreuse;
             border-radius: 4px;
             padding: 10px;
             margin: 5px 0;
