@@ -115,12 +115,12 @@
 
         if (questionId > 0) {
             var previousButton = document.getElementById("previousButton");
-            previousButton.visibility = false;
+            previousButton.hidden = false;
         }
 
         if (questionId === questionsList.length - 1) {
             var nextButton = document.getElementById("nextButton");
-            nextButton.visibility = true;
+            nextButton.hidden = true;
         }
     }
 
@@ -132,12 +132,12 @@
 
         if (questionId === 0) {
             var previousButton = document.getElementById("previousButton");
-            previousButton.visibility = false;
+            previousButton.hidden = false;
         }
 
         if (questionId < questionsList.length - 1) {
             var nextButton = document.getElementById("nextButton");
-            nextButton.visibility = true;
+            nextButton.hidden = true;
         }
     }
 
@@ -187,7 +187,7 @@
         testDiv.style.display = '';
 
         var previousButton = document.getElementById("previousButton");
-        previousButton.visibility = false;
+        previousButton.hidden = false;
 
         nextQuestion();
     }
@@ -195,7 +195,7 @@
 </script>
 
 <div id="menu" class="container">
-        <button onclick="startTest()">Rozpocznij test</button>
+    <button onclick="startTest()">Rozpocznij test</button>
 </div>
 
 <div id="test" class="container" style="display: none">
