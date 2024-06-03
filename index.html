@@ -213,15 +213,6 @@
     }
 
     function startTest() {
-        var menuDiv = document.getElementById("menu");
-        menuDiv.style.display = 'none';
-
-        var testDiv = document.getElementById("test");
-        testDiv.style.display = '';
-
-        var previousButton = document.getElementById("previousButton");
-        previousButton.hidden = true;
-
         questionId = -1;
         chosenQuestionsList = [];
         chosenQuestionCategoryInfo = [];
@@ -234,10 +225,10 @@
 
                 var categoryInfo = allQuestionCategoryInfo.find(item => item.category === categoryName);
                 chosenQuestionCategoryInfo.push({
-                            'category': categoryInfo.category,
-                            'firstId': chosenQuestionsList.length + categoryInfo.firstId,
-                            'numberQuestions': categoryInfo.numberQuestions
-                        });
+                    'category': categoryInfo.category,
+                    'firstId': chosenQuestionsList.length + categoryInfo.firstId,
+                    'numberQuestions': categoryInfo.numberQuestions
+                });
 
                 for (var i = categoryInfo.firstId; i < categoryInfo.firstId + categoryInfo.numberQuestions; i++) {
                     chosenQuestionsList.push(allQuestionsList[i]);
@@ -246,6 +237,15 @@
         });
 
         if (chosenQuestionsList.length > 0) {
+            var menuDiv = document.getElementById("menu");
+            menuDiv.style.display = 'none';
+
+            var testDiv = document.getElementById("test");
+            testDiv.style.display = '';
+
+            var previousButton = document.getElementById("previousButton");
+            previousButton.hidden = true;
+
             nextQuestion();
         }
     }
