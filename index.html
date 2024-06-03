@@ -134,21 +134,50 @@
         questionNumberDiv.innerText = '' + currentQuestionId + ' / ' + questionNumbers;
     }
 
+    function setNavigationButtons() {
+        var previousButton = document.getElementById("previousButton");
+
+        if (questionId === 0) {
+            previousButton.hidden = true;
+        } else {
+            previousButton.hidden = true;
+        }
+
+        var nextButton = document.getElementById("nextButton");
+
+        if (questionId === chosenQuestionsList.length - 1) {
+            nextButton.hidden = true;
+        } else {
+            nextButton.hidden = false;
+        }
+
+        var questionsCategory = chosenQuestionsList[questionId].category;
+        var categoryIndex = chosenQuestionCategoryInfo.findIndex(item => item.category === questionsCategory);
+
+        var previousCategory = document.getElementById("previousCategory");
+
+        if (categoryIndex === 0) {
+            previousCategory.hidden = true;
+        } else {
+            previousCategory.hidden = false;
+        }
+
+        var nextCategory = document.getElementById("nextCategory");
+
+        if (categoryIndex === chosenQuestionCategoryInfo.length - 1) {
+            nextCategory.hidden = true;
+        } else {
+            nextCategory.hidden = false;
+        }
+    }
+
     function nextQuestion() {
         if (questionId < chosenQuestionsList.length - 1) {
             questionId++;
             setQuestion()
         }
 
-        if (questionId > 0) {
-            var previousButton = document.getElementById("previousButton");
-            previousButton.hidden = false;
-        }
-
-        if (questionId === chosenQuestionsList.length - 1) {
-            var nextButton = document.getElementById("nextButton");
-            nextButton.hidden = true;
-        }
+        setNavigationButtons()
     }
 
     function previousQuestion() {
@@ -157,15 +186,7 @@
             setQuestion()
         }
 
-        if (questionId === 0) {
-            var previousButton = document.getElementById("previousButton");
-            previousButton.hidden = true;
-        }
-
-        if (questionId < chosenQuestionsList.length - 1) {
-            var nextButton = document.getElementById("nextButton");
-            nextButton.hidden = false;
-        }
+        setNavigationButtons()
     }
 
 
