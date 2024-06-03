@@ -8,7 +8,8 @@
         "content": " Gdy dwa jachty żeglują różnymi halsami i istnieje ryzyko zderzenia, wówczas musi ustąpić:",
         "correct_answer": "jacht płynący lewym halsem",
         "incorrect_answer_1": "jacht nawietrzny",
-        "incorrect_answer_2": "jacht płynący prawym halsem"
+        "incorrect_answer_2": "jacht płynący prawym halsem",
+        "image": "image/img_2_256.jpg"
     },
     {
         "test_id": "7",
