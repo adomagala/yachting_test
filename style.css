@@ -100,7 +100,7 @@ h1 {
 
 .navigation-buttons {
     margin-top: 50px;
-    display: inline;
+    display: flow;
     justify-content: space-between;
 }
 
