@@ -34,10 +34,22 @@
                     }
                     return 0;
                 });
-            })
-            .catch(error => {
-                console.error('Error fetching JSON:', error);
-                document.getElementById('question').innerText = 'Błąd ładowania pytania.';
+
+                var lastCategory = questionsList[i].category;
+                var firstQuestion = 0;
+
+                for (var i = 0; i < questionsList.length; i++) {
+                    if (lastCategory !== questionsList[i].category || i === questionsList.length - 1) {
+                        questionCategoryInfo.push({
+                            'category': lastCategory,
+                            'firstId': firstQuestion,
+                            'numberQuestions': i - firstQuestion
+                        });
+
+                        firstQuestion = i;
+                        lastCategory = questionsList[i].category;
+                    }
+                }
             });
     });
 
