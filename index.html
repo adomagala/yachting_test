@@ -12,11 +12,27 @@
     var questionsList = [];
     var questionId = -1
 
+
     document.addEventListener("DOMContentLoaded", function () {
         fetch('all_questions.json')
             .then(response => response.json())
             .then(data => {
-                questionsList = data;
+                questionsList = data.sort((a, b) => {
+                    if (parseInt(a.test_id) < parseInt(b.test_id)) {
+                        return -1;
+                    }
+                    if (parseInt(a.test_id) > parseInt(b.test_id)) {
+                        return 1;
+                    }
+
+                    if (parseInt(a.subcategory) < parseInt(b.subcategory)) {
+                        return -1;
+                    }
+                    if (parseInt(a.subcategory) > parseInt(b.subcategory)) {
+                        return 1;
+                    }
+                    return 0;
+                });
             })
             .catch(error => {
                 console.error('Error fetching JSON:', error);
@@ -155,7 +171,7 @@
             <div id="subcategory" style="float: right"></div>
         </div>
         <div style="display: inline">
-            <div style="float: left"><b>Pytanie:</b></div>
+            <div style="float: left"><b>Numer:</b></div>
             <div id="question-number" style="float: right"></div>
         </div>
     </div>
