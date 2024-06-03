@@ -115,12 +115,12 @@
 
         if (questionId > 0) {
             var previousButton = document.getElementById("previousButton");
-            previousButton.visibility = '';
+            previousButton.visibility = false;
         }
 
         if (questionId === questionsList.length - 1) {
             var nextButton = document.getElementById("nextButton");
-            nextButton.visibility = 'hidden';
+            nextButton.visibility = true;
         }
     }
 
@@ -132,12 +132,12 @@
 
         if (questionId === 0) {
             var previousButton = document.getElementById("previousButton");
-            previousButton.visibility = 'hidden';
+            previousButton.visibility = false;
         }
 
         if (questionId < questionsList.length - 1) {
             var nextButton = document.getElementById("nextButton");
-            nextButton.visibility = '';
+            nextButton.visibility = true;
         }
     }
 
@@ -187,7 +187,7 @@
         testDiv.style.display = '';
 
         var previousButton = document.getElementById("previousButton");
-        previousButton.visibility = 'hidden';
+        previousButton.visibility = false;
 
         nextQuestion();
     }
