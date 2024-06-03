@@ -175,3 +175,22 @@ h1 {
 #start-test:hover {
     background-color: orangered;
 }
+
+#returnToMenu {
+        margin-top: 50px;
+    display: flow;
+    justify-content: space-between;
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#returnToMenu:hover {
+    background-color: orangered;
+}
