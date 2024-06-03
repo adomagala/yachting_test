@@ -227,7 +227,8 @@
         chosenQuestionCategoryInfo = [];
 
         var testContainer = document.getElementById("test-container");
-        testContainer.forEach(category => {
+        var buttons = testContainer.querySelectorAll("button");
+        buttons.forEach(category => {
             if (category.className === 'category-selected') {
                 var categoryName = category.innerText;
 
