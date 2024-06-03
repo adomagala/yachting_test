@@ -140,7 +140,7 @@
         if (questionId === 0) {
             previousButton.hidden = true;
         } else {
-            previousButton.hidden = true;
+            previousButton.hidden = false;
         }
 
         var nextButton = document.getElementById("nextButton");
@@ -174,19 +174,17 @@
     function nextQuestion() {
         if (questionId < chosenQuestionsList.length - 1) {
             questionId++;
-            setQuestion()
+            setQuestion();
+            setNavigationButtons();
         }
-
-        setNavigationButtons()
     }
 
     function previousQuestion() {
         if (questionId > 0) {
             questionId--;
-            setQuestion()
+            setQuestion();
+            setNavigationButtons();
         }
-
-        setNavigationButtons()
     }
 
 
@@ -258,10 +256,32 @@
         testDiv.style.display = 'none';
     }
 
+    function previousCategory() {
+        var categoryName = chosenQuestionsList[questionId].category;
+
+        var categoryIndex = chosenQuestionCategoryInfo.findIndex(item => item.category === categoryName);
+        var categoryInfo = chosenQuestionCategoryInfo[categoryIndex - 1];
+
+        questionId = categoryInfo.firstId;
+
+        setQuestion();
+    }
+
+    function nextCategory() {
+        var categoryName = chosenQuestionsList[questionId].category;
+
+        var categoryIndex = chosenQuestionCategoryInfo.findIndex(item => item.category === categoryName);
+        var categoryInfo = chosenQuestionCategoryInfo[categoryIndex + 1];
+
+        questionId = categoryInfo.firstId;
+
+        setQuestion();
+    }
+
 </script>
 <div id="test-container" style="display: none">
-    <h1>Wybrane kategorie do testu</h1>
     <div id="menu" class="container">
+        <h1>Wybrane kategorie do testu</h1>
         <div id="category-list">
         </div>
         <button id="start-test" onclick="startTest()">Rozpocznij test</button>
