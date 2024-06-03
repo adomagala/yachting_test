@@ -1,135 +1,147 @@
 body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
 
-        .container {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-        }
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
 
-        h1 {
-            font-size: 24px;
-            margin-top: 50px;
-        }
+h1 {
+    font-size: 24px;
+    margin-top: 50px;
+}
 
-        .answer {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 10px;
-            margin: 5px 0;
-            width: 100%;
-            cursor: pointer;
-            font-size: 16px;
-        }
+.answer {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        .answer-selected-correct {
-            background-color: green;
-            color: white;
-            border: 5px solid black;
-            border-radius: 4px;
-            padding: 10px;
-            margin: 5px 0;
-            width: 100%;
-            cursor: pointer;
-            font-size: 16px;
-        }
+.answer-selected-correct {
+    background-color: green;
+    color: white;
+    border: 5px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        .answer-correct {
-            background-color: green;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 10px;
-            margin: 5px 0;
-            width: 100%;
-            cursor: pointer;
-            font-size: 16px;
-        }
+.answer-correct {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        .answer-selected-incorrect {
-            background-color: red;
-            color: white;
-            border: 5px solid black;
-            border-radius: 4px;
-            padding: 10px;
-            margin: 5px 0;
-            width: 100%;
-            cursor: pointer;
-            font-size: 16px;
-        }
+.answer-selected-incorrect {
+    background-color: red;
+    color: white;
+    border: 5px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        .answer-incorrect {
-            background-color: red;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 10px;
-            margin: 5px 0;
-            width: 100%;
-            cursor: pointer;
-            font-size: 16px;
-        }
+.answer-incorrect {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        #answers {
-            margin-top: 20px;
-        }
+#answers {
+    margin-top: 20px;
+}
 
-        .answer:hover {
-            background-color: #0056b3;
-        }
+.answer:hover {
+    background-color: #0056b3;
+}
 
-        .result {
-            margin-top: 20px;
-            font-size: 18px;
-            font-weight: bold;
-        }
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-        .navigation-buttons {
-            margin-top: 50px;
-            display: flex;
-            justify-content: space-between;
-        }
+.navigation-buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
 
-        .navigation-buttons button {
-            background-color: yellowgreen;
-            color: black;
-            border: none;
-            border-radius: 4px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
+.navigation-buttons button {
+    background-color: yellowgreen;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
 
-        .navigation-buttons button:hover {
-            background-color: yellow;
-        }
+.navigation-buttons button:hover {
+    background-color: yellow;
+}
 
-        #menu button {
-            background-color: yellowgreen;
-            color: black;
-            border: none;
-            border-radius: 4px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
+@media (hover: none) {
+    .navigation-buttons button:hover {
+        background-color: yellowgreen; /* Styl taki jak w stanie normalnym */
+    }
+}
 
-        #menu button:hover {
-            background-color: yellow;
-        }
+#menu button {
+    background-color: yellowgreen;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#menu button:hover {
+    background-color: yellow;
+}
+
+@media (hover: none) {
+    #menu button:hover {
+        background-color: yellowgreen; /* Styl taki jak w stanie normalnym */
+    }
+}
