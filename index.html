@@ -241,7 +241,9 @@
             }
         });
 
-        nextQuestion();
+        if (chosenQuestionsList.length > 0) {
+            nextQuestion();
+        }
     }
 
     function returnToMenu() {
