@@ -87,10 +87,15 @@
     function setQuestion() {
         questionText = chosenQuestionsList[questionId].content;
         correctAnswer = chosenQuestionsList[questionId].correct_answer;
+        correctAnswerImg = chosenQuestionsList[questionId].correct_answer_img;
         incorrectAnswer1 = chosenQuestionsList[questionId].incorrect_answer_1;
+        incorrectAnswer1Img = chosenQuestionsList[questionId].incorrect_answer_1_img;
         incorrectAnswer2 = chosenQuestionsList[questionId].incorrect_answer_2;
+        incorrectAnswer2Img = chosenQuestionsList[questionId].incorrect_answer_2_img;
 
-        answersList = simpleShuffle([correctAnswer, incorrectAnswer1, incorrectAnswer2]);
+        answersList = simpleShuffle([{'text': correctAnswer, 'img': correctAnswerImg},
+            {'text': incorrectAnswer1, 'img': incorrectAnswer1Img},
+            {'text': incorrectAnswer2, 'img': incorrectAnswer2Img}]);
 
         document.getElementById('question').innerText = questionText;
 
@@ -100,7 +105,7 @@
         answersList.forEach(answer => {
             const button = document.createElement('button');
             button.className = 'answer';
-            button.innerText = answer;
+            button.innerText = '<a>' + answer['text'] + '</a>' + !!answer['img'] ? '<img src="' + answer['img'] + '"/>' : '';
             button.setAttribute('onclick', 'checkAnswer(this)');
             button.setAttribute('is_correct_answer', (correctAnswer === answer));
             answersContainer.appendChild(button);
@@ -288,7 +293,7 @@
         </div>
         <button id="start-test" onclick="startTest()">Rozpocznij test</button>
         <div style="width: 100%; margin-top: 20px">
-            Wersja: 0.1.10
+            Wersja: 0.1.11
         </div>
     </div>
 
@@ -313,14 +318,20 @@
 
         <div style="margin-top: 10px; display: grid">
             <div class="navigation-buttons">
-                <button id="previousButton" style="float: left; width: 100%; height: 100%" onclick="previousQuestion()">< Poprzednie pytanie
+                <button id="previousButton" style="float: left; width: 100%; height: 100%" onclick="previousQuestion()">
+                    < Poprzednie pytanie
                 </button>
-                <button id="nextButton" style="float: right; width: 100%; height: 100%" onclick="nextQuestion()">Nastepne pytanie ></button>
+                <button id="nextButton" style="float: right; width: 100%; height: 100%" onclick="nextQuestion()">
+                    Nastepne pytanie >
+                </button>
             </div>
             <div class="navigation-buttons">
-                <button id="previousCategory" style="float: left; width: 100%; height: 100%t" onclick="previousCategory()"><< Poprzednie kategoria
+                <button id="previousCategory" style="float: left; width: 100%; height: 100%t"
+                        onclick="previousCategory()"><< Poprzednie kategoria
                 </button>
-                <button id="nextCategory" style="float: right; width: 100%; height: 100%" onclick="nextCategory()">Nastepne kategoria >></button>
+                <button id="nextCategory" style="float: right; width: 100%; height: 100%" onclick="nextCategory()">
+                    Nastepne kategoria >>
+                </button>
             </div>
             <div>
                 <button id="returnToMenu" onclick="returnToMenu()">Powrót do menu</button>
