@@ -103,7 +103,7 @@
         answersContainer.innerHTML = '';
 
         answersList.forEach(answer => {
-            if ((answer['text'] !== '') && (answer['img'] !== '')) {
+            if ((answer['text'] !== '') || (!!answer['img'])) {
                 const button = document.createElement('button');
                 button.className = 'answer';
                 button.innerHTML = '<a>' + answer['text'] + '</a>' + (!!answer['img'] ? '<img src="' + answer['img'] + '"/>' : '');
@@ -295,7 +295,7 @@
         </div>
         <button id="start-test" onclick="startTest()">Rozpocznij test</button>
         <div style="width: 100%; margin-top: 20px">
-            Wersja: 0.1.21
+            Wersja: 0.1.23
         </div>
     </div>
 
