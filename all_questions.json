@@ -8101,7 +8101,7 @@
     "category": "Motorowodne - Budowa jachtu, silniki i układy napędowe",
     "description": "SM - Silniki",
     "group": "Instalacje na jachcie",
-    "content": "Podaj kolejność zamykania zaworów przy odstawianiu<br />kuchenki gazowej:",
+    "content": "Podaj kolejność zamykania zaworów przy odstawianiu kuchenki gazowej:",
     "correct_answer": "zawór na butli gazowej następnie na zawór na kuchence",
     "incorrect_answer_1": "zawór na kuchence następnie na butli z gazem",
     "incorrect_answer_2": "kolejność jest dowolna"
@@ -8486,7 +8486,7 @@
     "category": "Motorowodne - Przepisy Śródlądowe",
     "description": "SM - Przepisy Śródlądowe",
     "group": "5 - Dźwięki",
-    "content": "Ciągła seria, podwójnych krótkich dźwięków na drodze<br />śródlądowej oznacza:",
+    "content": "Ciągła seria, podwójnych krótkich dźwięków na drodze śródlądowej oznacza:",
     "correct_answer": "człowiek za burtą",
     "incorrect_answer_1": "niebezpieczeństwo zderzenia",
     "incorrect_answer_2": "moje maszyny pracują wstecz"
@@ -8662,7 +8662,7 @@
     "category": "Motorowodne - Przepisy Śródlądowe",
     "description": "SM - Przepisy Śródlądowe",
     "group": "4 - Sygnały wzywania pomocy",
-    "content": "Sygnał dźwiękowy składający się z grupy trzech krótkich, trzech długich i trzech<br />krótkich dźwięków oznacza:",
+    "content": "Sygnał dźwiękowy składający się z grupy trzech krótkich, trzech długich i trzech krótkich dźwięków oznacza:",
     "correct_answer": "sygnał wzywania pomocy",
     "incorrect_answer_1": "niebezpieczeństwo zderzenia",
     "incorrect_answer_2": "mam nurka pod wodą"
@@ -8706,7 +8706,7 @@
     "category": "Motorowodne - Przepisy Śródlądowe",
     "description": "SM - Przepisy Śródlądowe",
     "group": "5 - Dźwięki",
-    "content": "Jeden krótki dźwięk nadawany przez statek na drodze<br />śródlądowej oznacza:",
+    "content": "Jeden krótki dźwięk nadawany przez statek na drodze śródlądowej oznacza:",
     "correct_answer": "zmieniam mój kurs w prawo",
     "incorrect_answer_1": "moje maszyny pracują wstecz",
     "incorrect_answer_2": "człowiek za burtą"
@@ -8882,7 +8882,7 @@
     "category": "Motorowodne - Przepisy Śródlądowe",
     "description": "SM - Przepisy Śródlądowe",
     "group": "6 - Oznakowanie statkow",
-    "content": "Dzienne oznakowanie statku stojącego na kotwicy jest<br />następujące:",
+    "content": "Dzienne oznakowanie statku stojącego na kotwicy jest następujące:",
     "correct_answer": "czarna kula",
     "incorrect_answer_1": "czarny romb",
     "incorrect_answer_2": "czerwono - żółta kula"
@@ -9456,7 +9456,7 @@
     "category": "Motorowodne - Locja śródlądowa",
     "description": "SM - Locja śródlądowa",
     "group": "3 - prawa lewa rozgalezienie przejscie na prawa lewa",
-    "content": "Pława w biało-zielone pasy ze znakiem szczytowym w<br />kształcie stożka oznacza:",
+    "content": "Pława w biało-zielone pasy ze znakiem szczytowym w kształcie stożka oznacza:",
     "correct_answer": "znak pływający przy lewym brzegu",
     "incorrect_answer_1": "znak pływający przy prawym brzegu",
     "incorrect_answer_2": "rozgałęzienie szlaku żeglownego"
@@ -9523,9 +9523,9 @@
     "description": "SM - Locja śródlądowa",
     "group": "2 - oznakowanie m. niebezpiecznych, odosobnione, bezp. woda, wyjscie szlakow z jezior.",
     "content": "Wschodni znak kardynalny to:",
-    "correct_answer": "pława, kolumienka lub tyka ze znakiem szczytowym dwa<br />czarne stożki, jeden nad drugim, podstawami do siebie",
-    "incorrect_answer_1": "pława, kolumienka lub tyka ze znakiem szczytowym dwa<br />czarne stożki, jeden nad drugim, wierzchołkami skierowanymi w górę",
-    "incorrect_answer_2": "pława, kolumienka lub tyka ze znakiem szczytowym dwa<br />czarne stożki, jeden nad drugim, wierzchołkami skierowanymi<br />w dół"
+    "correct_answer": "pława, kolumienka lub tyka ze znakiem szczytowym dwa czarne stożki, jeden nad drugim, podstawami do siebie",
+    "incorrect_answer_1": "pława, kolumienka lub tyka ze znakiem szczytowym dwa czarne stożki, jeden nad drugim, wierzchołkami skierowanymi w górę",
+    "incorrect_answer_2": "pława, kolumienka lub tyka ze znakiem szczytowym dwa czarne stożki, jeden nad drugim, wierzchołkami skierowanymi w dół"
   },
   {
     "test_id": "93",
@@ -9801,7 +9801,7 @@
     "category": "Motorowodne - Meteorologia",
     "description": "SM - Meteorologia",
     "group": "3 - opis lub prędkosć wiatru -> skala B",
-    "content": "W prognozie pogody na śródlądziu najważniejsze dla żeglarzy<br />informacje dotyczą:",
+    "content": "W prognozie pogody na śródlądziu najważniejsze dla żeglarzy informacje dotyczą:",
     "correct_answer": "siły wiatru",
     "incorrect_answer_1": "temperatury",
     "incorrect_answer_2": "nadciągających nad Polskę mas powietrza"
