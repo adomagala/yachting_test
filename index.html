@@ -103,12 +103,14 @@
         answersContainer.innerHTML = '';
 
         answersList.forEach(answer => {
-            const button = document.createElement('button');
-            button.className = 'answer';
-            button.innerHTML = '<a>' + answer['text'] + '</a>' + (!!answer['img'] ? '<img src="' + answer['img'] + '"/>' : '');
-            button.setAttribute('onclick', 'checkAnswer(this)');
-            button.setAttribute('is_correct_answer', ((correctAnswer === answer['text']) && (correctAnswerImg === answer['img'])));
-            answersContainer.appendChild(button);
+            if ((answer['text'] !== '') && (answer['img'] !== '')) {
+                const button = document.createElement('button');
+                button.className = 'answer';
+                button.innerHTML = '<a>' + answer['text'] + '</a>' + (!!answer['img'] ? '<img src="' + answer['img'] + '"/>' : '');
+                button.setAttribute('onclick', 'checkAnswer(this)');
+                button.setAttribute('is_correct_answer', ((correctAnswer === answer['text']) && (correctAnswerImg === answer['img'])));
+                answersContainer.appendChild(button);
+            }
         });
 
         questionImg = chosenQuestionsList[questionId].image
@@ -293,7 +295,7 @@
         </div>
         <button id="start-test" onclick="startTest()">Rozpocznij test</button>
         <div style="width: 100%; margin-top: 20px">
-            Wersja: 0.1.19
+            Wersja: 0.1.20
         </div>
     </div>
 
